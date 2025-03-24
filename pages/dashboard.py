@@ -1,6 +1,14 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+import subprocess
+import sys
+
+try:
+    import matplotlib.pyplot as plt
+except ModuleNotFoundError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "matplotlib"])
+    import matplotlib.pyplot as plt
+
 from wordcloud import WordCloud
 from shared import extract_video_id
 from fetchcomments import get_youtube_comments, analyze_sentiment
