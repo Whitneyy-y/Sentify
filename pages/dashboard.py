@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
 from wordcloud import WordCloud
 from shared import extract_video_id
 from fetchcomments import get_youtube_comments, analyze_sentiment
