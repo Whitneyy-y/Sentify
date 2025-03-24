@@ -1,0 +1,6 @@
+Libraries installed
+NLTK
+Transformers
+Pandas
+Streamlit
+Hashlib
