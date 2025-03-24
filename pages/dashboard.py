@@ -1,5 +1,13 @@
 import streamlit as st
 import pandas as pd
+import os
+import subprocess
+try:
+    import matplotlib.pyplot as plt
+except ModuleNotFoundError:
+    subprocess.check_call(["pip", "install", "matplotlib"])
+    import matplotlib.pyplot as plt
+
 from matplotlib import pyplot as plt
 from wordcloud import WordCloud
 from shared import extract_video_id
